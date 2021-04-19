@@ -1,13 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/0c946afeef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="script" href="src/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>
-        Git!
-    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <input id="searchLocation" type="search" placeholder="Enter your City..." autofocus="on"
+                    autocomplete="off">
+            </div>
+            <div class="col-3">
+                <input id="search-button" type="submit" value="Search"
+                    class="form-control btn btn-primary shadow-sm w-100" />
+            </div>
+            <div class="col-3">
+                <button class="btn btn-success w-100" id="current-button">
+                    Current
+                </button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-7">
+                <p class="today">
+                <div id="description">_</div>
+                <span id="temperature">
+                    17
+                </span>
+                <br />
+                <a href="#" id="celsius">
+                    ℃
+                </a>
+                <strong>|</strong>
+                <a href="#" id="fahrenheit">
+                    ℉
+                </a>
+                <br />
+                <br />
+                </p>
+            </div>
+            <div class="col-5">
+                <ul class="rhw">
+                    <span id="feels-like">
+                        <li>Feels like</li>
+                    </span>
+                    <br />
+                    <span id="humidity">
+                        <li>
+                            Humidity
+                        </li>
+                    </span>
+                    <br />
+                    <span id="wind">
+                        <li>
+                            Wind
+                        </li>
+                    </span>
+                    <br />
+                </ul>
+            </div>
+        </div>
+        <br />
+        <h1>
+            LOCATION
+        </h1>
+        <h6 class="date">
+        </h6>
+
+
+        <div class="tempScale">
+            <p>
+                <span id="lowTemp">Lowest temp</span>
+                /
+                <span id="highTemp">Highest temp</span>
+            </p>
+        </div>
+        <br />
+        <div class="days">
+            <div class="row">
+                <div class="col-2">
+                    Tomorrow
+                </div>
+                <div class="col-2">
+                    Tuesday
+                </div>
+                <div class="col-2">
+                    Wednesday
+                </div>
+                <div class="col-2">
+                    Thursday
+                </div>
+                <div class="col-2">
+                    Friday
+                </div>
+                <div class="col-2">
+                    Saturday
+                </div>
+            </div>
+        </div>
+        <div class="daysEmojis">
+            <div class="row">
+                <div class="col-2">
+                    <div class="heavyRain">
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="cloudy">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sunny">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sunny">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="showers">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="cloudy">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
 </body>
+
 </html>
